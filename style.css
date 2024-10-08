@@ -47,6 +47,21 @@ nav {
 
 }
 
+#navbarNav .navbar-nav li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    background-color: #046d97;
+}
+
+#navbarNav .navbar-nav li:hover::after {
+    width: 50%;
+}
+
 .home-container {
     margin-top: 50px;
     width: 100%;
@@ -100,6 +115,14 @@ nav {
     background-color: white;
     transform: scale(1.1);
     transform: translateY(-5px);
+}
+
+#home-btn .white{
+    background-color: white;
+}
+
+#home-btn .white:hover{
+    background-color: var(--background);
 }
 
 hr {
