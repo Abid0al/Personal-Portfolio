@@ -1,7 +1,7 @@
 // JavaScript code for the typing effect
 const h3 = document.querySelector(".skillName");
 const typingContainer = document.getElementById("typing-container");
-const skills = ["Creative Developer", "Video Editor", "Digital Marketer", "Content Marketer"];
+const skills = ["Web Developer", "Video Editor", "Digital Marketer", "Content Marketer"];
 
 function changeNames(gotnames, delay) {
   return new Promise((resolve) => {
@@ -28,18 +28,10 @@ async function getname() {
     await changeNames(getname, 1000);
     await new Promise((resolve) => setTimeout(resolve, 500)); // Pause between skills
     if (i == skills.length - 1) {
-      i = 0;
+      i = -1; // Reset to -1 so the next iteration starts at 0
     }
   }
 }
 
-// window.onload = getname;
-
-
-
-
-
-
-
-
-window.addEventListener("load", getname())
+// Corrected window event listener
+window.addEventListener("load", getname);
