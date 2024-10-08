@@ -47,7 +47,7 @@ nav {
 
 }
 
-#navbarNav .navbar-nav li::after {
+.navbar-nav li::after {
     content: "";
     position: absolute;
     width: 0;
@@ -58,7 +58,7 @@ nav {
     background-color: #046d97;
 }
 
-#navbarNav .navbar-nav li:hover::after {
+.navbar-nav li:hover::after {
     width: 50%;
 }
 
